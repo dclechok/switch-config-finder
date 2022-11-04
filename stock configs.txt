@@ -1,0 +1,4 @@
+get stock configs
+
+create a config file
+

@@ -27,14 +27,15 @@ shell.sendall("show version\r")
 time.sleep(3)
 
 out = shell.recv(99999)
-print(out.decode("ascii"))
 
 shell.sendall("\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r")
 
 time.sleep(3)
 
 out = shell.recv(99999)
-print(out.decode("ascii"))
+print(str(out.decode("ascii")))
+if str(out).find("lanlite"):
+    print(host + ' is Lanlite!')
 # channel.sendall_stderr(username)
 # out = channel.recv(9999)
 # print(out)
